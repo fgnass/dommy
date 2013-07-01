@@ -1,4 +1,4 @@
-# Dommy
+# Dommy [![Build Status](https://travis-ci.org/fgnass/dommy.png)](https://travis-ci.org/fgnass/dommy)
 
 A Document dummy that mocks just enough of the DOM API to render HTML.
 
