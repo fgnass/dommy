@@ -1,6 +1,6 @@
 {
   "name": "dommy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Document dummy that mocks just enough of the DOM API to render HTML.",
   "author": "Felix Gnass",
   "license": "MIT",
