@@ -39,4 +39,7 @@ assert.equal(el.className, 'foo bar')
 el.classList.toggle('foo')
 assert.equal(el.className, 'bar')
 
+el.className = ''
+assert.equal(el.outerHTML, '<div></div>')
+
 console.log('All tests passed.')
