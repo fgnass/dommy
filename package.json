@@ -11,5 +11,8 @@
   "main": "./lib",
   "scripts": {
     "test": "node test"
+  },
+  "devDependencies": {
+    "tape": "^2.13.3"
   }
 }
