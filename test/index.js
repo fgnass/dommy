@@ -1,5 +1,5 @@
 var dommy = require('..')
-  , test = require('tape')
+  , test = require('tap').test
 
 
 test('document', function(t) {

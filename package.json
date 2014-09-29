@@ -12,7 +12,8 @@
   "scripts": {
     "test": "node test"
   },
-  "devDependencies": {
-    "tape": "^2.13.3"
+  "devDependencies": {},
+  "dependencies": {
+    "tap": "^0.4.12"
   }
 }
