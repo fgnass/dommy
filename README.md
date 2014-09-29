@@ -16,7 +16,16 @@ body.appendChild(document.createTextNode('Hello'))
 body.classList.add('foo')
 
 document.appendChild(html)
+
+console.log(document.outerHTML)
+// <html><body class="foo">Hello</body></html>
 ```
+
+### Setting innerHTML
+
+Dommy also supports the innerHTML property. Note that dommy doesn't
+include an HTML parser, hence children set via innerHTML won't be converted
+into actual DOM nodes.
 
 ## The MIT License (MIT)
 
