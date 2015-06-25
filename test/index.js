@@ -21,6 +21,16 @@ test('element', function(t) {
   t.end()
 })
 
+test('raw content', function(t) {
+  var doc = dommy()
+  var el = doc.createElement('script')
+
+  el.appendChild(doc.createTextNode('var a = "1" < 3'))
+  t.equal(el.outerHTML, '<script>var a = "1" < 3</script>', 'content is unescaped')
+
+  t.end()
+})
+
 test('attributes', function(t) {
   var doc = dommy()
   var a = doc.createElement('a')
