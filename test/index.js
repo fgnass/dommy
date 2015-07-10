@@ -92,3 +92,27 @@ test('fragments', function(t) {
   t.equal(el.outerHTML, '<div><h1>hello</h1></div>')
   t.end()
 })
+
+test('mutation', function(t) {
+  var doc = dommy()
+  var ul = doc.createElement('ul')
+  var li1 = doc.createElement('li')
+  var li2 = doc.createElement('li')
+  var li3 = doc.createElement('li')
+
+  li1.innerHTML = '1'
+  li2.innerHTML = '2'
+  li3.innerHTML = '3'
+
+  ul.insertBefore(li3, null)
+  ul.insertBefore(li2, ul.lastChild)
+  ul.insertBefore(li1, li2)
+
+  t.equal(li1.parentNode, ul, 'insertBefore sets parentNode')
+  t.equal(ul.innerHTML, '<li>1</li><li>2</li><li>3</li>', 'insertBefore')
+
+  ul.removeChild(li1.nextSibling)
+  t.equal(ul.innerHTML, '<li>1</li><li>3</li>', 'removeChild')
+
+  t.end()
+})

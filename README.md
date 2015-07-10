@@ -5,20 +5,22 @@ A Document dummy that mocks just enough of the DOM API to render HTML.
 ## Example
 
 ```js
-var dommy = require('dommy')
+var dommy = require('dommy');
 
-var document = dommy()
-var html = document.createElement('html')
-var body = document.createElement('body')
+var document = dommy();
+var html = document.createElement('html');
+var body = document.createElement('body');
 
-html.appendChild(body)
-body.appendChild(document.createTextNode('Hello'))
-body.classList.add('foo')
+html.appendChild(body);
 
-document.appendChild(html)
+body.appendChild(document.createTextNode('world'));
+body.insertBefore(document.createTextNode('hello '), body.lastChild);
 
-console.log(document.outerHTML)
-// <html><body class="foo">Hello</body></html>
+body.classList.add('foo');
+document.appendChild(html);
+
+console.log(document.outerHTML);
+// <html><body class="foo">hello world</body></html>
 ```
 
 ### Setting innerHTML
@@ -29,7 +31,7 @@ into actual DOM nodes.
 
 ## The MIT License (MIT)
 
-Copyright (c) 2013 Felix Gnass
+Copyright (c) 2013-2015 Felix Gnass
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

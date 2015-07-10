@@ -12,7 +12,9 @@
   "scripts": {
     "test": "node test"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^0.24.0"
+  },
   "dependencies": {
     "tap": "^0.4.12"
   }
